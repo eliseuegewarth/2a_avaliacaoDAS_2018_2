@@ -60,4 +60,10 @@ public class CdbParameterizedTests {
 		Cdb investimento = new Cdb(this.dias, this.aplicacao, this.juros, this.aliquota);
 		assertEquals(this.impostoDeRenda, investimento.getImpostoDeRenda(), 0.009);
 	}
+	
+	@Test
+	public void rendimentoLiquidoTest() {
+		Cdb investimento = new Cdb(this.dias, this.aplicacao, this.juros, this.aliquota);
+		assertEquals(this.rendimentoLiquidoPercentual, investimento.getRendimentoLiquidoPercentual(), 0.009);
+	}
 }
