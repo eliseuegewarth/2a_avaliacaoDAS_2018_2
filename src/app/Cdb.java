@@ -16,6 +16,8 @@ public class Cdb {
 	}
 	
 	public double getRendimentoBruto() {
-		return 13.97;
+		double tempo = this.quantidadeDias/365.00;
+		double result = (double) Math.round(tempo * this.valorAplicado * (this.taxaAnual/100)*100)/100;
+		return result;
 	}
 }
