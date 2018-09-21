@@ -25,4 +25,9 @@ public class Cdb {
 		double result = (double) Math.round(this.getRendimentoBruto() * (this.aliquota/100) *100) /100;
 		return result;
 	}
+
+	public double getRendimentoLiquidoPercentual() {
+		double result = ((double) Math.round((((this.valorAplicado + this.getRendimentoBruto() - this.getImpostoDeRenda())/this.valorAplicado) -1) * 100 * 10000)) / 10000;
+		return result;
+	}
 }
